@@ -1,0 +1,13 @@
+
+https://github.com/module-federation/module-federation-examples
+
+----------------------------------------------------------------------
+
+PS C:\Temp\module-federation-examples\different-react-versions-16-18\app2> npm install
+PS C:\Temp\module-federation-examples\different-react-versions-16-18\app2> npm run start
+
+PS C:\Temp\module-federation-examples\different-react-versions-16-18\app1> npm install
+PS C:\Temp\module-federation-examples\different-react-versions-16-18\app1> npm run start
+
+PS C:\Temp\module-federation-examples\different-react-versions-16-18> npm install -g pnpm
+PS C:\Temp\module-federation-examples\different-react-versions-16-18> pnpm run start
