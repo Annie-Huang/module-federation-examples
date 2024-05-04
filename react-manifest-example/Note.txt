@@ -1,0 +1,50 @@
+https://github.com/module-federation/module-federation-examples
+
+----------------------------------------------------------------------
+
+PS C:\Temp\module-federation-examples\react-manifest-example> pnpm install
+Scope: all 4 workspace projects
+Downloading typescript@5.4.5: 5.83 MB/5.83 MB, done
+Downloading antd@5.16.4: 9.44 MB/9.44 MB, done
+Packages: +369
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Downloading @rspack/binding-win32-x64-msvc@0.6.2: 18.22 MB/18.22 MB, done
+Progress: resolved 377, reused 0, downloaded 369, added 369, done
+node_modules/.pnpm/core-js@3.36.1/node_modules/core-js: Running postinstall script, done in 962ms
+
+devDependencies:
++ @babel/preset-react 7.23.3
++ wait-on 7.2.0
+
+ WARN  Issues with peer dependencies found
+host
+└─┬ antd 5.16.4
+  └─┬ rc-picker 4.4.1
+    └── ✕ unmet peer luxon@">= 3.x": found 1.28.1
+
+remote1
+└─┬ antd 5.16.4
+  └─┬ rc-picker 4.4.1
+    └── ✕ unmet peer luxon@">= 3.x": found 1.28.1
+
+remote2
+└─┬ antd 5.16.4
+  └─┬ rc-picker 4.4.1
+    └── ✕ unmet peer luxon@">= 3.x": found 1.28.1
+
+Done in 8m 28.3s
+PS C:\Temp\module-federation-examples\react-manifest-example>
+
+
+PS C:\Temp\module-federation-examples\react-manifest-example> pnpm run start
+
+http://localhost:3000/
+http://localhost:3000/remote1
+http://localhost:3000/remote2
+
+Note:
+It doesn't seems to use the source code of /remote1 and /remote2.
+It looks like just use the /host/@mf-types that refer to remote1 and remote2 code.
+Looks the /remote1/dist and remote2/dist was created when we run the 'pnpm run start'
+
+Honestly, this set up, even through it work, but it's so confusing. Cannot tell how the magic linked up together.
